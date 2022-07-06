@@ -24,6 +24,7 @@ resource "aws_security_group" "inbound-outbound" {
     from_port = local.http_port
     protocol  = "tcp"
     to_port   = local.http_port
+    cidr_blocks = ["0.0.0.0/0"]
   }
   tags = {
     Tier = var.tier
