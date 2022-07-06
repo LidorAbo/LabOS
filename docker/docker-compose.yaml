@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    build:
+      context:  ./
+      dockerfile: web.Dockerfile
+  nginx:
+    build:
+      context: ./
+      dockerfile: nginx.Dockerfile
+    ports:
+      - "80:80"
